@@ -1,0 +1,11 @@
+Program stadion.Na początku programu wytwarzamy po 11 aktywnych zawodników na każdą drużynę i 7 zawodników rezerwowych.Ponadto 
+wytwarzamy losową ilość kibibów dla każdej z drużyn.Następnie wszystkie obecne na stadionie osoby śpiewają hymn i mecz się 
+rozpoczyna.w trakcie meczu kibice danej druzyny mogą opuszczać stadion z powodów osobistych,zmieniać drużynę której kibicują,
+a także na stadion  mogą przybyć spóżnieni kibice.W losowych momentach dana drużyna zdobywa gola. Kibice tej drużyny krzyczą hura,
+zaś kibice drużyny,której bramkarz okazał się być ciaporajdą śpiewają nic się nie stało.W losowych momentach gry może dojść 
+do kontuzji któregoś z zawodników, wtedy zawodnik ten zostaje zastąpiony przez losowo wybranego człowieka z ławki rezerwowych
+a kibice skandują jego imię,lub coś tam śpiewaja.To samo w przypadku czerwonej kartki,ale wówczas kibice odpowiedniej drużyny 
+drą się sedzia kalosz.
+
+
+

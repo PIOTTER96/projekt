@@ -6,7 +6,7 @@
 #define WINDOWS
 
 #ifdef WINDOWS
-    #include<windows.h>
+#include<windows.h>
 #endif // WINDOWS
 
 Utils utils;
@@ -20,17 +20,18 @@ Utils::Utils()
 
 void Utils::sleep(uint32_t sec)
 {
-    #ifdef WINDOWS
+#ifdef WINDOWS
     Sleep(1000*sec);
-    #else
+#else
     usleep(1000000*sec);
-    #endif // WINDOWS
+#endif // WINDOWS
 }
 
-void Utils::clearScreen() {
-    #ifdef WINDOWS
+void Utils::clearScreen()
+{
+#ifdef WINDOWS
     system("cls");
-    #else
+#else
     system("clear");
-    #endif // WINDOWS
+#endif // WINDOWS
 }

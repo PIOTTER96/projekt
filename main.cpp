@@ -3,58 +3,90 @@
 #include <vector>
 #include "Utils.h"
 #include "Humans.h"
-#include "Stadion.h"
 using namespace std;
 
 int main()
 {
-    int czas;
-
-    Stadion stadion;
-    Druzyna druzyna1;//("Poland","Zaglebie_Lubin");
-    Druzyna druzyna2;//("Poland","Legia_Warszawa");
-    Druzyna trener1;
-    Druzyna trener2;
-    Druzyna kibice1;
-    Druzyna kibice2;
+    int czas, r;
+    Druzyna druzyna1;
+    Druzyna druzyna2;
     utils.clearScreen();
-    HumanFactory *factory = new HumanFactory();
-/*    factory->registerTypyLudzi(new Druzyna1(20, 50, "Meeee!"));
-    factory->registerTypyLudzi(new Druzyna2(10, 40, "Klap!"));
-    factory->registerTypyLudzi(new Kibice2(250, 500, "Iiihaha!"));
-    factory->registerTypyLudzi(new Kibice1(350, 700, "Muuuu!"));
-    factory->registerTypyLudzi(new Trener1(1, 5, "SSSssss!"));
-    factory->registerTypyLudzi(new Trener2(0, 3, "Krrk!"));*/
-    cout << endl << "Czas na mecz.Stadion zapelnia sie :" << endl;
+    cout << endl << "Czas na mecz. Stadion zapelnia sie:" << endl;
     cout << endl << "Druzyna 1-zawodnicy:" << endl;
     druzyna1.createGracz(15);
-     cout << endl << "Druzyna 1-trener:" << endl;
-    trener1.createTrener(1);
-     cout << endl << "Druzyna 2-zawodnicy:" << endl;
+    cout << endl << "Druzyna 1-trener:" << endl;
+    druzyna1.createTrener(1);
+    cout << endl << "Druzyna 2-zawodnicy:" << endl;
     druzyna2.createGracz(15);
-     cout << endl << "Druzyna 2-trener:" << endl;
-    trener2.createTrener(1);
+    cout << endl << "Druzyna 2-trener:" << endl;
+    druzyna2.createTrener(1);
     cout << endl << "Kibice druzyny 1:" << endl;
-    kibice1.createKibic(rand()%30+20);
-     cout << endl << "Kibice druzyny 2:" << endl;
-     kibice2.createKibic(rand()%30+20);
-  //  stadion.fill(factory, 2500);
-    delete factory;
+    druzyna1.createKibic(rand()%30+20);
+    cout << endl << "Kibice druzyny 2:" << endl;
+    druzyna2.createKibic(rand()%30+20);
     utils.sleep(10);
 
     cout << endl << "Mecz sie rozpoczyna!!!" << endl;
-    czas += rand()%10;
-    utils.sleep(czas);
 
+    druzyna1.bramki = 0;
+    druzyna2.bramki = 0;
 
-    cout << endl << "Slaughtering time!" << endl;
-    while(stadion.has_humans())
+    for(czas = 0; czas <= 90; czas = czas + rand()%45+1)
     {
-        utils.sleep(5);
-        Human *victim = stadion.get_human();
-        stadion.notify("death", victim->TypyLudzi());
-        delete victim;
+        utils.sleep(czas);
+        if(rand()%2==1)
+        {
+            cout << "Druzyna 1 zdobywa bramke. Kibice druzyny 1 sie ciesza:" << endl;
+            druzyna1.powiadom(1);
+            druzyna1.bramki++;
+            utils.sleep(1);
+            cout << "Kibice druzyny 2 pocieszaja swoich idolow:" << endl;
+            druzyna2.powiadom(2);
+            utils.sleep(1);
+        }
+        else
+        {
+            cout << "Druzyna 2 zdobywa bramke. Kibice druzyny 2 sie ciesza:" << endl;
+            druzyna2.powiadom(1);
+            druzyna2.bramki++;
+            utils.sleep(1);
+            cout << "Kibice druzyny 1 pocieszaja swoich idolow:" << endl;
+            druzyna1.powiadom(2);
+            utils.sleep(1);
+        }
     }
+    utils.sleep(5);
+    cout << endl << "Wybila 90 minuta. Sedzia dolicza " << rand()%3 + 2 << " minuty." << endl;
+    r = rand()%3;
+    if(r == 0)
+    {
+        cout << endl << "Nikomu nie udalo sie zdobyc bramki w doliczanym czasie gry." << endl;
+    }
+
+    else if(r == 1)
+    {
+        cout << "Co za emocje!!! Druzyna 1 zdobywa bramke. Kibice druzyny 1 sie ciesza:" << endl;
+        druzyna1.powiadom(1);
+        druzyna1.bramki++;
+        utils.sleep(1);
+        cout << "Kibice druzyny 2 pocieszaja swoich idolow:" << endl;
+        druzyna2.powiadom(2);
+        utils.sleep(1);
+    }
+
+    else if(r == 2)
+    {
+        cout << "Co za emocje!!! Druzyna 2 zdobywa bramke. Kibice druzyny 2 sie ciesza:" << endl;
+        druzyna2.powiadom(1);
+        druzyna2.bramki++;
+        utils.sleep(1);
+        cout << "Kibice druzyny 1 pocieszaja swoich idolow:" << endl;
+        druzyna1.powiadom(2);
+        utils.sleep(1);
+    }
+
+    cout << endl << "Mecz sie zakonczyl wynikiem: " << druzyna1.bramki << "-" << druzyna2.bramki << endl;
+    utils.sleep(10);
 
     return 0;
 }

@@ -1,0 +1,77 @@
+# depslib dependency file v1.0
+1498079882 source:c:\users\piotr\downloads\oczyszczony\stadion\human.cpp
+	"Human.h"
+
+1498079882 c:\users\piotr\downloads\oczyszczony\stadion\human.h
+	<iostream>
+	<vector>
+	<cstdlib>
+
+1498084847 source:c:\users\piotr\downloads\oczyszczony\stadion\humans.cpp
+	"Humans.h"
+	"Human.h"
+	"Utils.h"
+
+1498084944 c:\users\piotr\downloads\oczyszczony\stadion\humans.h
+	"Human.h"
+	<list>
+	<iostream>
+
+1498099479 source:c:\users\piotr\downloads\oczyszczony\stadion\main.cpp
+	<iostream>
+	<ctime>
+	<vector>
+	"Utils.h"
+	"Humans.h"
+
+1498079882 c:\users\piotr\downloads\oczyszczony\stadion\utils.h
+	<cstdint>
+	"config.h"
+
+1459319928 c:\users\piotr\downloads\oczyszczony\stadion\config.h
+
+1498079882 source:c:\users\piotr\downloads\oczyszczony\stadion\utils.cpp
+	"Utils.h"
+	<unistd.h>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+
+1498079882 source:c:\users\piotr\desktop\stadion\human.cpp
+	"Human.h"
+
+1498079882 c:\users\piotr\desktop\stadion\human.h
+	<iostream>
+	<vector>
+	<cstdlib>
+
+1498141104 source:c:\users\piotr\desktop\stadion\humans.cpp
+	"Humans.h"
+	"Human.h"
+	"Utils.h"
+
+1498141104 c:\users\piotr\desktop\stadion\humans.h
+	"Human.h"
+	<list>
+	<iostream>
+
+1498079882 c:\users\piotr\desktop\stadion\utils.h
+	<cstdint>
+	"config.h"
+
+1459319928 c:\users\piotr\desktop\stadion\config.h
+
+1498099674 source:c:\users\piotr\desktop\stadion\main.cpp
+	<iostream>
+	<ctime>
+	<vector>
+	"Utils.h"
+	"Humans.h"
+
+1498079882 source:c:\users\piotr\desktop\stadion\utils.cpp
+	"Utils.h"
+	<unistd.h>
+	<cstdlib>
+	<ctime>
+	<windows.h>
+

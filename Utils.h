@@ -7,7 +7,7 @@ class Utils
 public:
     Utils();
     void sleep(uint32_t sec);
- 	void clearScreen();
- };
+    void clearScreen();
+};
 
 extern Utils utils;
